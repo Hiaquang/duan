@@ -1,0 +1,28 @@
+.camon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.camon-image {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.camon-title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.camon-message {
+    font-size: 18px;
+    color: #555;
+}

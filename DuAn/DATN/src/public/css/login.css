@@ -1,0 +1,246 @@
+/* Container chính */
+.login-container {
+    background-color: #f5f5f7;
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hộp đăng nhập */
+.login-box {
+    background: white;
+    border-radius: 18px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.login-box h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #1d1d1f;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Nút đăng nhập mạng xã hội */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid #d2d2d7;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.social-btn:hover {
+    background: #f5f5f7;
+    border-color: #86868b;
+}
+
+.social-btn i {
+    font-size: 20px;
+}
+
+.social-btn.google i {
+    color: #ea4335;
+}
+
+.social-btn.facebook i {
+    color: #1877f2;
+}
+
+.social-btn.apple i {
+    color: #000;
+}
+
+/* Dấu phân cách */
+.or {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.or hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #d2d2d7;
+}
+
+.text_or {
+    padding: 0 15px;
+    color: #86868b;
+    font-size: 14px;
+}
+
+/* Form đăng nhập */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1d1d1f;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #0071e3;
+    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1);
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #86868b;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Tùy chọn */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+
+.remember-me label {
+    color: #86868b;
+    font-size: 14px;
+    margin: 0;
+}
+
+.forgot-password {
+    color: #0071e3;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Nút đăng nhập */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #0071e3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+    background: #0077ed;
+}
+
+/* Đăng ký */
+.register {
+    margin-top: 20px;
+    text-align: center;
+    color: #86868b;
+    font-size: 14px;
+}
+
+.register a {
+    color: #0071e3;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+.input-group-login {
+    display: grid;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 30px 20px;
+    }
+    
+    .social-buttons {
+        gap: 10px;
+    }
+    
+    .social-btn {
+        width: 40px;
+        height: 40px;
+    }
+}

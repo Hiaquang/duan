@@ -1,0 +1,70 @@
+.admin-sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #4a6cf7 0%, #2851c7 100%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0 1rem 0;
+}
+.sidebar-logo {
+    width: 70px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+.sidebar-username {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    flex: 1;
+}
+.sidebar-menu li {
+    width: 100%;
+}
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+.sidebar-menu li.active a,
+.sidebar-menu li a:hover {
+    background: rgba(255,255,255,0.12);
+    color: #ffd700;
+}
+.sidebar-logout {
+    margin: 2rem 0 1rem 0;
+    width: 90%;
+    padding: 0.7rem 0;
+    background: rgba(255,255,255,0.12);
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.sidebar-logout:hover {
+    background: #ff4d4f;
+    color: #fff;
+}

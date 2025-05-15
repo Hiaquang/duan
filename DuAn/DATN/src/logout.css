@@ -1,0 +1,261 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.logout {
+    background-image: url('./img/snapedit_1704649569502.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+form{
+    display: grid;
+    justify-content: center;
+    
+}
+.box_form{
+border: 2px solid #fff;
+border-radius: 5px;
+padding: 10px;
+width: 510px;
+display: grid;
+justify-content: center;
+justify-items: center;
+background-image: url('./img/snapedit_1704649569502.png');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 1020px 850px;
+box-sizing: border-box;
+margin-top: -20px;
+}
+
+h1{
+text-align: center;
+color: #fff;
+}
+.face_gg{
+display: flex;
+font-size: 10px;
+align-items: center;
+color: #fff;
+margin-top: -50px;
+}
+.face_gg div{
+margin: 5px;
+}
+.face{
+border: 1px solid black;
+padding: 3px;
+background: #0b5c91;
+border-radius: 5px;
+}
+.face:hover{
+background-color: #3374a0;
+}
+.face a{
+    color: #fff;
+    text-decoration: none;
+}
+.gg{
+border: 1px solid black;
+padding: 3px;
+background: #45c6ee;
+border-radius: 5px;
+}
+.gg:hover{
+background-color: #8bdef7;
+}
+.gg a{
+color: #fff;
+text-decoration: none;
+}
+.or{
+display: flex;
+align-items: center;
+}
+.or div{
+margin: 2px;
+}
+.text_or{
+background: #fff;
+padding: 8px;
+border-radius: 18px;
+color: black;
+font-weight: 600;
+font-size: 12px;
+}
+hr{
+width: 50px;
+color: black;
+
+}
+.inpt{
+display: flex;
+align-items: center;
+position: relative;
+} 
+input{
+border-radius: 5px;
+border: none;
+width: 400px;
+height: 50px;
+}
+.inpt div i{
+position: absolute;
+border-left: 1px solid black;
+padding: 3px;
+margin-left: -22px;
+margin-top: -10px;
+}
+.check_b{
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: #fff;
+font-weight: 600;
+font-size: 10.5px;
+}
+.check_box{
+margin-top: 12px;
+}
+.forget{
+transform: translateX(18px);
+}
+.forget a{
+color: #fff; 
+text-decoration: none;
+}
+.forget a:hover{
+color: firebrick;
+text-decoration: underline;
+}
+.btn111{
+    width: 251px;
+    height: 30px;
+    color: #fff;
+    font-weight: 600;
+    background-color: #0f5686;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn111:hover{
+    color:orangered;   
+    background: #336f96;
+}
+.btn222{
+    cursor: pointer;
+    width: 251px;
+    height: 30px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: orangered;
+}
+.btn222:hover{
+    background: rgb(255, 113, 62);
+    color: #0f5686;
+}
+input::placeholder{
+    transform: translateX(5px);
+    color: rgba(128, 128, 128, 0.588);
+}
+.inpt .op2{
+   font-size: 15px;
+   color: black;
+   font-weight: 600;
+   display: none;
+}
+.select{
+   display: none;
+}
+
+/* Popup modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Popup modal content */
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 32px 28px 24px 28px;
+  min-width: 320px;
+  max-width: 90vw;
+  text-align: center;
+  animation: popup-fade-in 0.25s;
+}
+
+@keyframes popup-fade-in {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.modal-icon {
+  font-size: 2.2rem;
+}
+
+.modal-content h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #1a202c;
+  font-weight: 600;
+}
+
+.modal-content p {
+  color: #444;
+  margin: 12px 0 24px 0;
+  font-size: 1rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn-confirm {
+  background: #e53e3e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.btn-confirm:hover {
+  background: #c53030;
+}
+
+.btn-cancel {
+  background: #edf2f7;
+  color: #2d3748;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.btn-cancel:hover {
+  background: #e2e8f0;
+}

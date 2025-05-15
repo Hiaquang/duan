@@ -1,0 +1,552 @@
+/* Modern Price Filter Styles - Updated May 2025 */
+
+/* Trang kết quả tìm kiếm - Search Header */
+.search-header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.search-header h1 {
+  font-size: 22px;
+  color: #343a40;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.search-header .search-box {
+  position: relative;
+  max-width: 500px;
+}
+
+.search-header .search-box input {
+  width: 100%;
+  padding: 12px 40px 12px 45px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.search-header .search-box input:focus {
+  border-color: #4db6ac;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(77, 182, 172, 0.2);
+}
+
+.search-header .search-box i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 18px;
+}
+
+/* Filter Panel Improvements */
+.filter-toggle-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #4db6ac;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-weight: 500;
+  text-align: left;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.filter-toggle-button i {
+  margin-right: 8px;
+}
+
+.filter-toggle-button:hover {
+  background-color: #3b9e94;
+}
+
+.filter-panel {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.filter-panel-open {
+  display: block;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filter-section {
+  margin-bottom: 25px;
+}
+
+.filter-section h3 {
+  font-size: 18px;
+  color: #343a40;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.category-option {
+  padding: 8px 15px;
+  background-color: #f1f3f5;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #495057;
+  transition: all 0.2s ease;
+}
+
+.category-option:hover {
+  background-color: #e9ecef;
+}
+
+.category-option.active {
+  background-color: #4db6ac;
+  color: white;
+}
+
+/* Modern Price Filter Styles - Updated May 2025 */
+
+.filter-controls-wrapper {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1000; /* Higher z-index to ensure dropdown is visible */
+}
+
+.filter-controls-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.sorting-control, 
+.price-filter-control, 
+.per-page-control,
+.results-counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
+
+.sorting-control label,
+.per-page-control label {
+  font-weight: 500;
+  color: #495057;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sorting-control select,
+.per-page-control select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  color: #343a40;
+  transition: all 0.2s ease;
+}
+
+.sorting-control select:focus,
+.per-page-control select:focus {
+  border-color: #4db6ac;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(77, 182, 172, 0.2);
+}
+
+.results-counter {
+  font-size: 16px;
+  color: #495057;
+}
+
+.results-counter strong {
+  color: #343a40;
+  font-weight: 600;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.price-filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 15px;
+  background-color: #4db6ac;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.price-filter-toggle:hover {
+  background-color: #3b9e94;
+  transform: translateY(-1px);
+}
+
+.price-filter-toggle i {
+  font-size: 14px;
+}
+
+/* Price filter dropdown panel */
+.price-filter-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%; /* Positioned right below the controls container */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeDown 0.3s ease-out;
+  z-index: 1001; /* Ensure this is above other elements */
+  margin-top: 5px;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.price-filter-options h4 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.price-range-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.price-range-button {
+  padding: 8px 15px;
+  background-color: #f1f3f5;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.price-range-button:hover {
+  background-color: #e9ecef;
+}
+
+.price-range-button.active {
+  background-color: #4db6ac;
+  color: white;
+  border-color: #4db6ac;
+}
+
+.custom-price-range {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.price-input-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.price-input-group input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1;
+  min-width: 100px;
+}
+
+.price-input-group input:focus {
+  border-color: #4db6ac;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(77, 182, 172, 0.2);
+}
+
+.price-input-group span {
+  color: #495057;
+  font-weight: 500;
+}
+
+.apply-price-filter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 15px;
+  background-color: #4db6ac;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.apply-price-filter:hover {
+  background-color: #3b9e94;
+}
+
+.clear-filters {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 15px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clear-filters:hover {
+  background-color: #f5c6cb;
+}
+
+.reset-filters-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+}
+
+.reset-filters-button:hover {
+  background-color: #f5c6cb;
+}
+
+.reset-filters-button i {
+  font-size: 14px;
+}
+
+/* Loading & No Products States */
+.products-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  margin-top: 20px;
+  z-index: 1; /* Lower z-index than the filter panel */
+  position: relative;
+}
+
+.products-loading .spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(77, 182, 172, 0.2);
+  border-radius: 50%;
+  border-top-color: #4db6ac;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.products-loading p {
+  color: #6c757d;
+  font-size: 16px;
+}
+
+.no-products-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  text-align: center;
+  color: #6c757d;
+  margin-top: 20px;
+  z-index: 1; /* Lower z-index than the filter panel */
+  position: relative;
+}
+
+.no-products-found i {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #f8d7da;
+}
+
+.no-products-found h3 {
+  margin-bottom: 10px;
+  color: #343a40;
+}
+
+.no-products-found p {
+  margin-bottom: 20px;
+}
+
+.no-products-found button {
+  padding: 8px 16px;
+  background-color: #4db6ac;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.no-products-found button:hover {
+  background-color: #3b9e94;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: #4db6ac;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top:hover {
+  background-color: #3b9e94;
+  transform: translateY(-3px);
+}
+
+/* Create spacing for products list to appear below the filter panel */
+.HienSPTrongMotTrang {
+  margin-top: 20px !important;
+  position: relative;
+  z-index: 10; /* Lower than filter panel */
+}
+
+/* Fix to prevent products from overlapping filter panel */
+.laptop-container {
+  position: relative;
+}
+
+/* Create spacing between filter panel and product list */
+.filter-panel-open .HienSPTrongMotTrang,
+.filter-panel-open .HienSP {
+  margin-top: 80px !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .filter-controls-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .results-counter {
+    margin-left: 0;
+  }
+  
+  .sorting-control, 
+  .price-filter-control, 
+  .per-page-control {
+    width: 100%;
+  }
+  
+  .price-range-buttons {
+    gap: 8px;
+  }
+  
+  .price-range-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  
+  .price-input-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .price-input-group input {
+    width: 100%;
+  }
+  
+  /* Adjust panel position for mobile */
+  .price-filter-panel {
+    position: absolute;
+    top: 100%;
+    padding: 15px;
+  }
+  
+  /* Add more spacing on mobile */
+  .filter-panel-open .HienSPTrongMotTrang,
+  .filter-panel-open .HienSP {
+    margin-top: 120px !important;
+  }
+}

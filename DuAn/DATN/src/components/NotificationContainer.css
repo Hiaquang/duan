@@ -1,0 +1,115 @@
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notification {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: white;
+    width: 320px;
+    animation: slideIn 0.3s ease-out;
+    position: relative;
+}
+
+.notification.success {
+    border-left: 4px solid #10B981;
+}
+
+.notification.error {
+    border-left: 4px solid #EF4444;
+}
+
+.notification.warning {
+    border-left: 4px solid #F59E0B;
+}
+
+.notification.info {
+    border-left: 4px solid #3B82F6;
+}
+
+.notification-icon {
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.notification.success .notification-icon i {
+    color: #10B981;
+}
+
+.notification.error .notification-icon i {
+    color: #EF4444;
+}
+
+.notification.warning .notification-icon i {
+    color: #F59E0B;
+}
+
+.notification.info .notification-icon i {
+    color: #3B82F6;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-content h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 4px;
+}
+
+.notification-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: #9CA3AF;
+    cursor: pointer;
+    padding: 4px;
+    font-size: 14px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    transition: color 0.2s;
+}
+
+.notification-close:hover {
+    color: #4B5563;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+} 

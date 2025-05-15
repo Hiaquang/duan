@@ -1,0 +1,202 @@
+/* 📌 Trang đổi mật khẩu - Thiết kế hiện đại */
+#update-password-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #4a90e2, #6a5acd, #a890e2, #1e3c72);
+  background-size: 400% 400%;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+  animation: bgAnimation 8s infinite alternate;
+}
+
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* 📦 Container chính */
+#update-password-page .update-password-container {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ✨ Hiệu ứng ánh sáng chạy trên border */
+#update-password-page .update-password-container::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: 22px;
+  border: 3px solid transparent;
+  background: linear-gradient(120deg, #4a90e2, #a890e2, #1e3c72) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: borderGlow 3s infinite linear;
+}
+
+@keyframes borderGlow {
+  0% { background: linear-gradient(120deg, #4a90e2, #a890e2, #1e3c72); }
+  100% { background: linear-gradient(120deg, #a890e2, #4a90e2, #1e3c72); }
+}
+
+/* 🔴 Thông báo lỗi & thành công */
+#update-password-page .error, 
+#update-password-page .success {
+  display: none; /* Mặc định ẩn lỗi */
+  font-size: 14px;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+#update-password-page .error.active {
+  display: block;
+  background: rgba(255, 0, 0, 0.2);
+  color: #ff4d4d;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+#update-password-page .success {
+  display: block;
+  background: rgba(0, 255, 0, 0.2);
+  color: #4dff88;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+}
+
+/* 🎨 Form nhập */
+#update-password-page .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#update-password-page label {
+  font-weight: 600;
+  color: white;
+}
+
+/* 🔳 Input */
+#update-password-page input {
+  position: relative;
+  z-index: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.3), inset -3px -3px 8px rgba(255, 255, 255, 0.1);
+}
+
+#update-password-page input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Khi input có lỗi */
+#update-password-page input.error {
+  border: 2px solid #ff4d4d !important;
+}
+
+#update-password-page input:focus {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  outline: none;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* 🔘 Button */
+#update-password-page button {
+  padding: 14px;
+  background: linear-gradient(135deg, #4a90e2, #6a5acd);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Hiệu ứng ánh sáng quét */
+#update-password-page button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease-in-out;
+}
+
+#update-password-page button:hover::before {
+  left: 100%;
+}
+
+#update-password-page button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(74, 144, 226, 0.5);
+}
+
+#update-password-page button:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 8px rgba(74, 144, 226, 0.2);
+}
+
+#update-password-page button:disabled {
+  background: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  #update-password-page {
+    padding: 10px;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+
+  #update-password-page .update-password-container {
+    padding: 25px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: none;
+  }
+
+  #update-password-page input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  #update-password-page button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}

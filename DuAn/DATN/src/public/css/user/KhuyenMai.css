@@ -1,0 +1,223 @@
+.khuyen-mai-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.khuyen-mai-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.promotions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.promotion-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.promotion-card:hover {
+    transform: translateY(-5px);
+}
+
+.promotion-header {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.promotion-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.promotion-card:hover .promotion-image {
+    transform: scale(1.05);
+}
+
+.promotion-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff4757;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.promotion-content {
+    padding: 20px;
+}
+
+.promotion-content h2 {
+    color: #2f3542;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.promotion-description {
+    color: #747d8c;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.promotion-dates {
+    background: #f1f2f6;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.promotion-dates p {
+    margin: 5px 0;
+    color: #2f3542;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.promotion-dates i {
+    color: #ff4757;
+}
+
+.promotion-products h3 {
+    color: #2f3542;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #dfe4ea;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-card h4 {
+    color: #2f3542;
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.product-price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.original-price {
+    color: #747d8c;
+    text-decoration: line-through;
+    font-size: 0.9em;
+}
+
+.discounted-price {
+    color: #ff4757;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.add-to-cart-btn {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.add-to-cart-btn:hover {
+    background: #ff6b81;
+}
+
+.loading {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2em;
+    color: #2f3542;
+}
+
+.error {
+    text-align: center;
+    padding: 50px;
+    color: #ff4757;
+    font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .khuyen-mai-container {
+        padding: 10px;
+    }
+
+    .khuyen-mai-title {
+        font-size: 2em;
+    }
+
+    .promotions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .promotion-header {
+        height: 150px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.promotion-card {
+    animation: fadeIn 0.5s ease-out;
+} 

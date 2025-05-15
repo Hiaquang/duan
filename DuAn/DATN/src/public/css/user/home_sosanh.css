@@ -1,0 +1,366 @@
+/* Home.css */
+.stickcompare {
+    position: fixed;
+    bottom: 0;
+    left: 100px;
+    right: 100px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    z-index: 1000;
+    height: 300px;
+}
+
+.stickcompare:hover {
+    box-shadow: 0 -6px 25px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.stickcompare_new {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listcompare {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+    height: calc(100% - 50px);
+}
+
+.listcompare li {
+    min-width: 180px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    padding: 8px;
+    position: relative;
+}
+
+.listcompare li img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+.listcompare li h3 {
+    font-size: 13px;
+    margin: 6px 0;
+    text-align: center;
+}
+
+.remove-ic-compare {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: #666;
+}
+
+.formsg {
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.closecompare {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.doss {
+    background: #2f80ed;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.txtremoveall {
+    color: #666;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 20px;
+}
+
+.clearall {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #666;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.product-info-ss {
+    font-size: 12px;
+    text-align: center;
+    display: grid;
+}
+
+.product-info-ss div {
+    margin: 3px 0;
+}
+
+.product-info-ss .price {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/* Trang so sánh sản phẩm */
+.compare-main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.compare-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.compare-products {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.compare-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.compare-list > li {
+    margin-bottom: 20px;
+}
+
+.compare-item {
+    position: relative;
+    padding: 15px;
+    width: 280px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.compare-label {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.compare-new, .compare-installment {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: #fdb813;
+    color: #fff;
+}
+
+.compare-img {
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.compare-thumb {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+.compare-result {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.compare-specs {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    justify-content: center;
+}
+
+.compare-specs span {
+    background: #f8f9fa;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.compare-price {
+    color: #ff4d4f;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+    display: block;
+}
+
+.compare-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.compare-vote {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #fdb813;
+}
+
+.compare-delete {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #666;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.compare-delete:hover {
+    color: #ff4d4f;
+}
+
+/* Box thêm sản phẩm */
+.compare-add-item {
+    width: 280px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.compare-add {
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.compare-add:hover {
+    border-color: #fdb813;
+    background: #fff8e6;
+}
+
+.compare-plus {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fdb813;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.compare-plus i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.compare-add span {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .compare-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .compare-item {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .compare-add-item {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+.compare-delete-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 77, 79, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.compare-delete-icon i {
+    color: white;
+    font-size: 20px;
+}
+
+.compare-delete-icon:hover {
+    background: #ff4d4f;
+    transform: scale(1.1);
+}
+
+.compare-item:hover .compare-delete-icon {
+    opacity: 1;
+    visibility: visible;
+}

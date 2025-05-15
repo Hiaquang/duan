@@ -1,0 +1,113 @@
+.admin_page_header {
+    background: none;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px #0001;
+    margin-bottom: 2rem;
+}
+
+.admin-table th, .admin-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.admin-table th {
+    background: #f7f9fa;
+    font-weight: 600;
+    color: #222;
+}
+
+.admin-table tr:last-child td {
+    border-bottom: none;
+}
+
+.btn {
+    border-radius: 6px;
+    font-size: 0.95rem;
+    padding: 0.35rem 1.1rem;
+}
+
+.btn-primary {
+    background: #4a6cf7;
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #2851c7;
+}
+
+.btn-danger {
+    background: #ff4d4f;
+    border: none;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: #d9363e;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.pagination-button {
+    background: #f7f9fa;
+    border: 1px solid #e0e0e0;
+    color: #222;
+    margin: 0 2px;
+    padding: 0.4rem 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.pagination-button.active,
+.pagination-button:hover {
+    background: #4a6cf7;
+    color: #fff;
+    border-color: #4a6cf7;
+}
+
+.form-control, .form-select {
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.search-filter-container, .search-filter-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.sidebar-logo {
+    width: 70px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.sidebar-username {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}

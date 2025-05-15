@@ -1,0 +1,184 @@
+body { 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 18px;
+    margin: 0; 
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.container-fulid {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.bann > .image {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.bann > .imagee {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+a { text-decoration: none;}
+
+.top-bar {
+  background: black;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.top-links a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+.menu_p {
+  background: black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  font-size: medium;
+}
+.menu_p a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background 0.3s;
+}
+.menu_p a:hover {
+  background: #fdb813;
+  border-radius: 5px;
+}
+.menu-toggle {
+  display: none;
+  background: #fdb813;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+/* menu navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0; /* Màu nền xám nhạt */
+  padding: 10px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  font-size: medium;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  font-size: medium;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333; /* Màu chữ đen */
+}
+
+.nav-item img {
+  width: 30px; /* Kích thước icon */
+  height: 30px;
+  margin-right: 5px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* end navbar */
+.nav_menu { 
+  background: orange; height: 70px; display: flex;
+  justify-content: center; align-items: center;width: 100%;position: fixed;z-index: 30; top: 0px; box-shadow: rgba(139, 146, 153, 0.4) 1px 8px 24px;}
+.container-fulid > main .box_as_at { margin-bottom: 10px;display: grid;grid-template-columns: auto auto;justify-content: center;}
+
+/* .container-fulid > main > article{ } */
+
+/* .container-fulid > footer { background: darkcyan; height: 90px;text-align: center;padding-top: 25px;font-weight: 700;font-size: 25px;color: #fff;} */
+.container-fulid > main > div .banner_box{display: grid;grid-template-columns: auto auto;justify-content: center;margin: 5px;}
+.container-fulid > main .banner_box > .banner1 {padding: 5px;}
+.container-fulid > main .banner_box > .banner2 {padding: 5px;}
+
+.bann {transition: transform 0.3s;}
+.bann:hover{transform: scale(1.2);cursor: pointer;border-radius: 10px;}
+.nav-item > a {font-weight: 600;}
+
+.navbar-nav > .nav-item > .nav-link {color: black;padding: 10px;border-radius: 5px;}
+.navbar-nav > .nav-item > .nav-link:hover {background-color: #eeeeee;color:#76dde7;}
+
+.box_Danhmuc_SP {
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 10px; /* Tăng khoảng cách giữa các ô */
+  justify-content: center; /* Căn giữa các ô */
+  margin: 20px 0;
+}
+.box_Danhmuc_SP > .box_danhmuc_img_text .Danhmuc_Text {
+  color: white;
+}
+.box_danhmuc_img_text {
+  color: white; /* Chữ màu trắng */
+  background-color: #fdb813;
+  border-radius: 12px; /* Bo góc mềm mại */
+  padding: 15px 25px; /* Tăng kích thước ô */
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.Danhmuc_Link {
+  color: white !important; /* Chữ màu trắng */
+  font-size: 18px; /* Tăng kích thước chữ */
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.box_danhmuc_img_text:hover {
+  background-color: black; /* Màu xanh đậm khi hover */
+  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ */
+} 

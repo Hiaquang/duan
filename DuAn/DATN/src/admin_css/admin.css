@@ -1,0 +1,361 @@
+/* Reset và Base styles */
+:root {
+  --primary-color: #4e73df;
+  --secondary-color: #858796;
+  --success-color: #1cc88a;
+  --info-color: #36b9cc;
+  --warning-color: #f6c23e;
+  --danger-color: #e74a3b;
+  --light-color: #f8f9fc;
+  --dark-color: #5a5c69;
+  --border-color: #e3e6f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+/* Admin Layout */
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, var(--primary-color) 10%, #224abe 100%);
+  color: white;
+  position: fixed;
+  height: 100vh;
+  z-index: 1000;
+}
+
+.admin-sidebar-header {
+  padding: 1.5rem;
+}
+
+.admin-user-info {
+  text-align: center;
+}
+
+.admin-user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.admin-user-info h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.admin-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-nav li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1rem 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.admin-nav li a:hover,
+.admin-nav li a.active {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.admin-nav li a i {
+  width: 20px;
+  text-align: center;
+}
+
+.logout-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background: var(--danger-color);
+}
+
+/* Main Content */
+.admin-main {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 250px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.admin-header h1 {
+  font-size: 1.75rem;
+  color: var(--dark-color);
+  margin: 0;
+}
+
+.breadcrumb a {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 0.15rem 1.75rem rgba(58, 59, 69, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.stat-card.products .stat-icon {
+  background: rgba(78, 115, 223, 0.1);
+  color: var(--primary-color);
+}
+
+.stat-card.categories .stat-icon {
+  background: rgba(54, 185, 204, 0.1);
+  color: var(--info-color);
+}
+
+.stat-card.users .stat-icon {
+  background: rgba(28, 200, 138, 0.1);
+  color: var(--success-color);
+}
+
+.stat-card.orders .stat-icon {
+  background: rgba(246, 194, 62, 0.1);
+  color: var(--warning-color);
+}
+
+.stat-info h3 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--dark-color);
+}
+
+.stat-info p {
+  margin: 0;
+  color: var(--secondary-color);
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 0.15rem 1.75rem rgba(58, 59, 69, 0.15);
+}
+
+.recent-orders h2 {
+  font-size: 1.25rem;
+  color: var(--dark-color);
+  margin-bottom: 1.5rem;
+}
+
+.orders-table {
+  overflow-x: auto;
+}
+
+.orders-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.orders-table th {
+  background: var(--light-color);
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status.pending {
+  background: rgba(246, 194, 62, 0.1);
+  color: var(--warning-color);
+}
+
+.status.processing {
+  background: rgba(78, 115, 223, 0.1);
+  color: var(--primary-color);
+}
+
+.status.completed {
+  background: rgba(28, 200, 138, 0.1);
+  color: var(--success-color);
+}
+
+.status.cancelled {
+  background: rgba(231, 74, 59, 0.1);
+  color: var(--danger-color);
+}
+
+/* Order Status Stats */
+.order-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Status-specific colors */
+.stat-card.pending .stat-icon {
+  background: rgba(246, 194, 62, 0.1);
+  color: var(--warning-color);
+}
+
+.stat-card.pending:hover {
+  box-shadow: 0 0.5rem 1rem rgba(246, 194, 62, 0.15);
+}
+
+.stat-card.processing .stat-icon {
+  background: rgba(78, 115, 223, 0.1);
+  color: var(--primary-color);
+}
+
+.stat-card.processing:hover {
+  box-shadow: 0 0.5rem 1rem rgba(78, 115, 223, 0.15);
+}
+
+.stat-card.completed .stat-icon {
+  background: rgba(28, 200, 138, 0.1);
+  color: var(--success-color);
+}
+
+.stat-card.completed:hover {
+  box-shadow: 0 0.5rem 1rem rgba(28, 200, 138, 0.15);
+}
+
+.stat-card.cancelled .stat-icon {
+  background: rgba(231, 74, 59, 0.1);
+  color: var(--danger-color);
+}
+
+.stat-card.cancelled:hover {
+  box-shadow: 0 0.5rem 1rem rgba(231, 74, 59, 0.15);
+}
+
+/* Spinning animation for processing icon */
+.stat-card.processing .stat-icon i {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--border-color);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 0;
+    transform: translateX(-100%);
+  }
+  
+  .admin-main {
+    margin-left: 0;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
